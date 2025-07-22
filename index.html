@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project - Ideas</title>
+  <link rel="stylesheet" href="style.css"><!-- Link ke file CSS -->
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="header-container">
+      <a href="#" class="logo">
+        <span class="logo-text"><span class="suit">Suit</span>media</span>
+      </a>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#" data-menu="work">Work</a></li>
+          <li><a href="#" data-menu="about">About</a></li>
+          <li><a href="#" data-menu="services">Services</a></li>
+          <li><a href="#" data-menu="ideas" class="active">Ideas</a></li>
+          <li><a href="#" data-menu="careers">Careers</a></li>
+          <li><a href="#" data-menu="contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div class="banner-bg">
+      <img id="banner-img" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80" alt="Ideas Banner" />
+    </div>
+    <div class="banner-content">
+      <h1>Ideas</h1>
+      <p>Where all our great things begin</p>
+    </div>
+  </section>
+
+  <!-- Post List Section -->
+  <section class="post-list">
+    <!-- Filters Section -->
+    <div class="filters">
+      <!-- Showing Text -->
+      <div class="showing">
+        Showing <span id="range-start">1</span> to <span id="range-end">10</span> of <span id="total-posts">100</span>
+      </div>
+
+      <!-- Right aligned filters -->
+      <div class="right-align">
+        <label for="show-per-page">Show per page:</label>
+        <select id="show-per-page">
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+        </select>
+
+        <label for="sort">Sort by:</label>
+        <select id="sort">
+          <option value="-published_at">Newest</option>
+          <option value="published_at">Oldest</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Post Container -->
+    <div id="post-container" class="grid-container">
+      <!-- Posts will be dynamically injected here -->
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination">
+      <button class="pagination-arrow" id="first-page" onclick="changePage('first')">&laquo;</button>
+      <button class="pagination-arrow" id="prev-page" onclick="changePage('prev')">&lsaquo;</button>
+      
+      <button class="pagination-btn" id="page-1" onclick="changePage(1)">1</button>
+      <button class="pagination-btn" id="page-2" onclick="changePage(2)">2</button>
+      <button class="pagination-btn" id="page-3" onclick="changePage(3)">3</button>
+      <button class="pagination-btn" id="page-4" onclick="changePage(4)">4</button>
+
+      <button class="pagination-arrow" id="next-page" onclick="changePage('next')">&rsaquo;</button>
+      <button class="pagination-arrow" id="last-page" onclick="changePage('last')">&raquo;</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
